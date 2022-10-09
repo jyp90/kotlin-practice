@@ -20,3 +20,11 @@
 - 유틸성 함수를 만들 때는 파일 최상단을 이용하면 편리하다.
 - 프로퍼티의 custom setter 에 접근 지시어를 붙일 수 있다.
 - java 에서 kotlin 코드를 사용할 때 internal 과 protected 는 주의해야 한다.
+
+--- 
+
+## 코틀린에서 object 키워드를 다루는 방법
+- Java static 변수와 함수를 만드려면 Kotlin companion object 사용해야 한다.
+- companion object 도 하나의 객체로 간주되기 때문에 이름을 붙일 수 있고, 다른 타입을 상속받을 수도 있다.
+- Kotlin 에서 싱글톤 클래스를 만들 때 'object' 키워드를 사용한다.
+- Kotlin 에서 익명 클래스를 만들 때 'object : 타입'을 사용한다.
