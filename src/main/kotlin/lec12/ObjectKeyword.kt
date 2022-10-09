@@ -7,12 +7,20 @@ class Person private constructor(
     var age: Int,
 ) {
     // static
-    companion object {
+    companion object Factory : Log {
         private const val MIN_AGE = 1
         fun newBaby(name: String): Person {
             return Person(name, MIN_AGE)
         }
+
+        override fun log() {
+            println("I am Person class of companion object Factory")
+        }
     }
+}
+
+interface Log {
+    fun log()
 }
 
 // singleton
