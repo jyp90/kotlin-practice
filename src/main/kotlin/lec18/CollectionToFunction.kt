@@ -5,7 +5,10 @@ data class Fruit(
     val name: String,
     val factoryPrice: Long,
     val currentPrice: Long,
-)
+) {
+    val isSamePriceFilter: Boolean
+        get() = factoryPrice == currentPrice
+}
 
 val fruits = listOf(
     Fruit(1, "apple", 1_000, 2_000),
@@ -73,3 +76,31 @@ val factoryPriceById: Map<Long, Long> = fruits.associateBy({ fruit -> fruit.id},
 fun collection() {
     groupByName.filter { (key, value) -> key == "apple" }
 }
+
+// 중첩된 컬렉션 처리
+val fruitsInList: List<List<Fruit>> = listOf(
+    listOf(
+        Fruit(1, "apple", 1_000, 2_000),
+        Fruit(2, "apple", 1_000, 2_100),
+        Fruit(3, "apple", 1_000, 2_000),
+        Fruit(4, "apple", 1_000, 2_200),
+        Fruit(5, "apple", 1_000, 2_300),
+    ),
+    listOf(
+        Fruit(6, "banana", 1_200, 2_000),
+        Fruit(7, "banana", 1_200, 2_100),
+        Fruit(8, "banana", 1_200, 2_200),
+        Fruit(9, "banana", 1_200, 2_300),
+    ),
+    listOf(
+        Fruit(10, "watermelon", 10_000, 12_000),
+        Fruit(11, "watermelon", 11_000, 13_000),
+    )
+)
+
+val samePriceFruits = fruitsInList.flatMap { list ->
+    list.filter { fruit -> fruit.isSamePriceFilter }
+}
+
+// List<List<Fruit>> -> List<Fruit>
+val flatten = fruitsInList.flatten()
