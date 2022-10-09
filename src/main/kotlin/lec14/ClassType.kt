@@ -28,3 +28,21 @@ fun handleCountry(country: Country) {
         else -> {}
     }
 }
+
+// Sealed Class, Sealed Interface
+sealed class HyundaiCar(
+    val name: String,
+    val price: Long
+)
+
+class Avante : HyundaiCar("아반테", 2_000L)
+class Grandeur : HyundaiCar("그랜져", 3_000L)
+class Sonata : HyundaiCar("소나타", 1_000L)
+
+private fun handleCar(car: HyundaiCar) {
+    when (car) {
+        is Avante -> TODO()
+        is Grandeur -> TODO()
+        is Sonata -> TODO()
+    }
+}
