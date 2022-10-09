@@ -9,6 +9,8 @@ class Person private constructor(
     // static
     companion object Factory : Log {
         private const val MIN_AGE = 1
+
+        @JvmStatic // possible to use Person.newBaby("A");
         fun newBaby(name: String): Person {
             return Person(name, MIN_AGE)
         }
