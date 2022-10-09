@@ -3,9 +3,16 @@ package lec09
 import java.lang.IllegalArgumentException
 
 class Person( // primary constructor, never null
-    val name: String,
+    name: String = "jypark",
     var age: Int
 ) {
+
+    // backing field
+    val name = name
+        get() = field.toString()
+
+    // get() = name.toString() -> infinite loop
+
     init { // initial constructor
         if(age <= 0) {
             throw IllegalArgumentException("$age is not less than 0")
@@ -35,4 +42,9 @@ fun main() {
 
     val baby = Person("baby")
     val defaultPerson = Person()
+
+    val adult = person.isAdult
+    val adultV1 = person.isAdultV1()
+    println(adult)
+    println(adultV1)
 }
