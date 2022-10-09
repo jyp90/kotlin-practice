@@ -77,3 +77,10 @@
 * infix function : 함수 호출 방식 변경 
 * inline function : 함수를 복사-붙여넣기
 * local function : 함수 내 함수 선언 
+
+---
+
+## Lambda (17강)
+* 함수를 파라미터로 보낼 수 있음
+* 마지막 파라미터가 함수인 경우, 소괄호 밖으로 보냄 
+  * function(param1, param2) { it.name == "apple" }
