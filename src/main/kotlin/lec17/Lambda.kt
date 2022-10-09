@@ -50,6 +50,7 @@ private fun filterFruits(
         }
     }
     return results
+    // return fruits.filter(filter)
 }
 
 // Closure
