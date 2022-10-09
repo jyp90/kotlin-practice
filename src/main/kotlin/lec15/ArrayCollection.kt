@@ -1,5 +1,7 @@
 package lec15
 
+import java.util.*
+
 // 1. array
 fun main() {
     val array = arrayOf(100, 200)
@@ -72,3 +74,18 @@ private fun printNumbers(numbers: List<Int>) {
 }
 
 // 3. nullable
+// List<Int?> : list nonnull, element nullable
+// List<Int>? : list nullable, element nonnull
+// List<Int?>?  : list nullable, element nullable
+fun nullable() {
+    val list1 : List<Int?>
+    val list2 : List<Int>?
+    val list3 : List<Int?>?
+}
+
+// collections modifier prevent
+fun unmodifiable() {
+    val list = listOf(10, 20, 30)
+    val un1 = Collections.unmodifiableList(list)
+
+}
