@@ -19,18 +19,40 @@ class Cat(
 
 class Penguin(
     species: String,
-) : Animal(species, 2) {
+) : Animal(species, 2), Swimable, Flyable {
 
     private val wingCount: Int = 2
 
-    override fun move() {
-
-    }
+    override fun move() {}
 
     override val legCount: Int // need open keyword
         get() = super.legCount + this.wingCount
+
+    override fun act() {
+        super<Swimable>.act()
+        super<Flyable>.act()
+    }
 }
+
+
+
 // interface
+interface Flyable {
+    fun act() {
+        println("padak")
+    }
+}
+
+interface Swimable {
+    val swimAbility: Int
+        get() = 3
+
+    fun act() {
+        println(swimAbility)
+        println("swimming")
+    }
+}
+
 
 // warning point
 
