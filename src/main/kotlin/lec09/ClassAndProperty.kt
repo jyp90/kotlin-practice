@@ -3,15 +3,12 @@ package lec09
 import java.lang.IllegalArgumentException
 
 class Person( // primary constructor, never null
-    name: String = "jypark",
+    val name: String = "jypark",
     var age: Int
 ) {
 
-    // backing field
-    val name = name
-        get() = field.toString()
-
-    // get() = name.toString() -> infinite loop
+    val uppercaseName: String
+        get() = this.name.uppercase();
 
     init { // initial constructor
         if(age <= 0) {
