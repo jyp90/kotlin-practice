@@ -37,3 +37,24 @@ val applePrices = fruits.filter { fruit -> fruit.name == "apple"}
 
 val values = fruits.filter { fruit -> fruit.name == "apple"}
     .mapNotNull { fruit -> fruit }
+
+// many collection processor
+// all : 전체이어야만 true
+val isAllApple = fruits.all { fruit -> fruit.name == "apple"}
+// none : 전체가 아니어야만 true
+val isNoApple = fruits.none { fruit -> fruit.name == "apple"}
+// any : 조건을 하나라도 만족하면 true,
+val isAnyApple = fruits.any { fruit -> fruit.name == "apple"}
+// count :
+val fruitCount = fruits.count()
+// sort
+val fruitSort = fruits.sortedBy { fruit -> fruit.currentPrice }
+val fruitSortDesc = fruits.sortedByDescending { fruit -> fruit.currentPrice }
+// distinct
+val distinctFruitsByName = fruits.distinctBy { fruit: Fruit -> fruit.name }
+// first & firstOrNull
+val firstFruit = fruits.first()
+val fruitFirstOrNull = fruits.firstOrNull()
+// last & lastOrNull
+val lastFruit = fruits.last()
+val lastFruitOrNull = fruits.lastOrNull()
