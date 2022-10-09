@@ -58,3 +58,18 @@ val fruitFirstOrNull = fruits.firstOrNull()
 // last & lastOrNull
 val lastFruit = fruits.last()
 val lastFruitOrNull = fruits.lastOrNull()
+
+// List to map
+// key : fruit.name, value = List
+val groupByName: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
+// key : fruit.id, value = fruit
+val associated: Map<Long, Fruit> = fruits.associateBy { fruit -> fruit.id }
+// key : fruit.name, value List<Fruit.factoryPrice>
+val factoryPriceMapByName: Map<String, List<Long>> = fruits.groupBy({ fruit -> fruit.name}, {fruit -> fruit.factoryPrice})
+// key : fruit.id, value fruit.factoryPrice
+val factoryPriceById: Map<Long, Long> = fruits.associateBy({ fruit -> fruit.id}, { fruit -> fruit.factoryPrice})
+
+// with filter
+fun collection() {
+    groupByName.filter { (key, value) -> key == "apple" }
+}
