@@ -2,19 +2,19 @@ package lec17
 
 import com.lannstark.lec17.Fruit
 
+val fruits = listOf(
+    Fruit("apple", 1_000),
+    Fruit("apple", 1_200),
+    Fruit("apple", 1_200),
+    Fruit("apple", 1_500),
+    Fruit("banana", 1_600),
+    Fruit("banana", 1_700),
+    Fruit("banana", 1_700),
+    Fruit("watermelon", 2_000),
+    Fruit("melon", 10_000),
+)
 // Kotlin Lambda
 fun main() {
-    val fruits = listOf(
-        Fruit("apple", 1_000),
-        Fruit("apple", 1_200),
-        Fruit("apple", 1_200),
-        Fruit("apple", 1_500),
-        Fruit("banana", 1_600),
-        Fruit("banana", 1_700),
-        Fruit("banana", 1_700),
-        Fruit("watermelon", 2_000),
-        Fruit("melon", 10_000),
-    )
 
     // lambda 1
     val isApple = fun(fruit: Fruit): Boolean {
@@ -51,7 +51,11 @@ private fun filterFruits(
 }
 
 // Closure
-
+fun closure() {
+    var target = "apple"
+    target = "banana"
+    filterFruits(fruits) { it.name == target }
+}
 
 
 // try with resources
