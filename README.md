@@ -90,3 +90,12 @@
     * non-final variable
   * 기존에 자바에서는 지원되지 않는 기능
 * Try-with-resources
+
+---
+
+## The Thins (19강)
+* 타입에 대한 별칭을 줄 수 있는 'typealias' 라는 키워드가 존재한다.
+* Import 당시 이름을 바꿀 수 있는 as import 기능이 존재한다.
+* 변수를 한 번에 선언할 수 있는 '구조분해' 기능이 있으며 componentN 함수를 사용한다.
+* for, while 문과는 달리 forEach 에는 break, continue 를 사용할 수 없다.
+* takeIf, takeUnless 를 활용해 코드 양을 줄이고 method chaining 을 할 수 있다.
