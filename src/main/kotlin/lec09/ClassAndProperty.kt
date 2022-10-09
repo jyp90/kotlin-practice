@@ -17,6 +17,13 @@ class Person( // primary constructor, never null
     constructor(): this("defaultName") {
         println("possible to create body")
     }
+
+    fun isAdultV1(): Boolean {
+        return this.age >= 20
+    }
+
+    val isAdult: Boolean
+        get() = this.age >= 20
 }
 
 fun main() {
