@@ -48,7 +48,7 @@ fun main() {
     })
 }
 
-// 익명클래스 : 특정 인터페이스나 클래스를 상속받은 구현체를 일회성으로 사용할 때 쓰는 클래스
+// 익명클래스(anonymous class) : 특정 인터페이스나 클래스를 상속받은 구현체를 일회성으로 사용할 때 쓰는 클래스
 private fun moveSomething(movable: Movable) {
     movable.move()
     movable.fly()
