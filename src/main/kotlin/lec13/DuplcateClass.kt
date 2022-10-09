@@ -7,9 +7,13 @@ fun main() {
 
 class JavaHouse(
     private val address: String,
-    private val livingRoom: LivingRoom = LivingRoom(10.0)
 ) {
-    class LivingRoom(
+    val livingRoom: LivingRoom = this.LivingRoom(10.0)
+    // inner class
+    inner class LivingRoom(
         private val area: Double
-    )
+    ) {
+        val address: String
+            get() = this@JavaHouse.address // 바깥클래스를 사용하기 위해 this@
+    }
 }
