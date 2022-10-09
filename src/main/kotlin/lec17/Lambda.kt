@@ -1,6 +1,8 @@
 package lec17
 
 import com.lannstark.lec17.Fruit
+import java.io.BufferedReader
+import java.io.FileReader
 
 val fruits = listOf(
     Fruit("apple", 1_000),
@@ -59,3 +61,8 @@ fun closure() {
 
 
 // try with resources
+fun tryWithResources(path: String) {
+    BufferedReader(FileReader(path)).use { reader ->
+        println(reader.readLine())
+    }
+}
