@@ -26,5 +26,14 @@ interface Log {
 }
 
 // singleton
+object Singleton {
+    var a: Int = 0
+}
+
+fun main() {
+    println(Singleton.a) // 1
+    Singleton.a += 10
+    println(Singleton.a) // 11
+}
 
 // object
