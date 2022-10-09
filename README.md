@@ -93,9 +93,16 @@
 
 ---
 
-## The Thins (19강)
+## The Things (19강)
 * 타입에 대한 별칭을 줄 수 있는 'typealias' 라는 키워드가 존재한다.
 * Import 당시 이름을 바꿀 수 있는 as import 기능이 존재한다.
 * 변수를 한 번에 선언할 수 있는 '구조분해' 기능이 있으며 componentN 함수를 사용한다.
 * for, while 문과는 달리 forEach 에는 break, continue 를 사용할 수 없다.
 * takeIf, takeUnless 를 활용해 코드 양을 줄이고 method chaining 을 할 수 있다.
+
+---
+
+## Scope Function (20강)
+* 람다를 사용해 일시적인 영역을 만들고, 코드를 더 간결하게 만들거나, method chaining 에 활용하는 함수
+* let / run / also / apply / with 의 종류가 있다.
+* 가독성이 달라지기 때문에 함께 프로덕트를 만들어 가는 팀끼리 convention 을 잘 정해야 한다.
