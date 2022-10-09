@@ -17,3 +17,15 @@ fun repeat(str: String, num: Int = 3, useNewLine: Boolean = true) {
         if(useNewLine) println(str) else println (str)
     }
 }
+
+fun main () {
+    // named argument
+    repeat("Hello World", useNewLine = true)
+    printNameAndGender(gender = "F" , name = "jypark")
+}
+
+
+fun printNameAndGender(name: String, gender: String) {
+    println(name)
+    println(gender)
+}
