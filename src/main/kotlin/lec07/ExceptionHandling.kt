@@ -26,7 +26,7 @@ fun parseIntOrThrowV02(str: String): Int? {
 // unchecked exception
 fun readFile() {
     val currentFile = File(".")
-    val file = File(currentFile.absoluteFile + "/a.txt")
+    val file = File(currentFile.absolutePath + "/a.txt")
     val reader = BufferedReader(FileReader(file))
     println(reader.readLine())
     reader.close()
@@ -35,6 +35,6 @@ fun readFile() {
 // try with resources
 fun readFileWithPath(path: String) {
     BufferedReader(FileReader(path)).use {reader ->
-        println(reader.readLine())
+
     }
 }
