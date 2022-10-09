@@ -54,5 +54,10 @@ interface Swimable {
 }
 
 
-// warning point
-
+// Inheritance Point
+/**
+ * 1. final : cannot override , default
+ * 2. open : open override
+ * 3. abstract : always override
+ * 4. override : override inheritance
+ */
